@@ -6,7 +6,7 @@ branches:
   only:
     - master
 
-# Travis CI 서버의 Home v3
+# Travis CI 서버의 Home v4
 cache:
   directories:
     - '$HOME/.m2/repository'
@@ -14,8 +14,8 @@ cache:
 
 script: "./gradlew clean build"
 
-# CI 실행 완료시 메일로 알람 v3
+# CI 실행 완료시 메일로 알람 v4
 notifications:
   email:
     recipients:
-      - ssarmango@gmail.com 
+      - getinthere@naver.com 
