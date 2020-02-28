@@ -34,7 +34,7 @@ public class IndexController {
 	
 	@GetMapping("/posts/save")
 	public String postsSave() {
-		return "/posts/save";
+		return "posts/save";
 	}
 	
 	@GetMapping("/posts/update/{id}")
