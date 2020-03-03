@@ -15,12 +15,11 @@ import org.springframework.context.annotation.FilterType;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
-
 import com.cos.book.config.auth.SecurityConfig;
 
-// 시큐리티를 사용안하면 WebMvcTest를 사용하자.
+// 시큐리티를 사용안하면 WebMvcTest를 사용하자. 
+// @SpringbootTest를 사용할 필요 없다.
 
-// JUnit4 로 변경
 @RunWith(SpringRunner.class)
 @WebMvcTest(controllers = HelloController.class, excludeFilters = {
 		@ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = SecurityConfig.class)
@@ -30,6 +29,7 @@ public class HelloControllerTest {
 	// 웹 API 테스트시 사용
 	// 스프링 MVC 테스트의 시작점
 	// GET, POST, PUT, DELETE 테스트 가능
+	
 	@Autowired
 	private MockMvc mvc;
 	

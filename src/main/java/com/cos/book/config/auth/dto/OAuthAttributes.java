@@ -52,7 +52,8 @@ public class OAuthAttributes {
 				.nameAttributeKey(userNameAttributeName).build();
 	}
 
+	// USER 권한 주기
 	public User toEntity() {
-		return User.builder().name(name).email(email).picture(picture).role(Role.GUEST).build();
+		return User.builder().name(name).email(email).picture(picture).role(Role.USER).build();
 	}
 }
